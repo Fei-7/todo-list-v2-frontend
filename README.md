@@ -2,7 +2,7 @@
 
 I create todo list v2 to practice my web development skill.
 
-Frontend tech
+Frontend tech\n
 Language : Javascript
 Framework : NextJS
 
