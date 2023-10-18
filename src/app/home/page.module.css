@@ -1,0 +1,142 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: wheat;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-top: 80px; */
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: slateblue;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+
+.navbar * {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar > p{
+    margin-left: 20px;
+}
+
+.navbar > div {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.navbar > div > p {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 600px;
+    margin-top: 80px;
+}
+
+.container > h1 {
+    font-size: 4rem;
+    color: rgb(92, 76, 201);
+    margin-bottom: 0px;
+}
+
+.subDetail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subDetail p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.subDetail p > span {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid slateblue;
+    margin-top: 20px;
+}
+
+.newTask {
+    width: 552px;
+    border: 4px solid slateblue;
+    border-radius: 9px;
+    padding: 20px;
+    font-family: sans-serif;
+    padding-bottom: 17px;
+}
+
+.newTask .name {
+    border: transparent;
+    width: 100%;
+    font-size: 2rem;
+    outline: none;
+    background-color: transparent;
+    cursor: text;
+}
+
+.newTask .name:empty::before {
+    content: attr(placeholder);
+    color: rgb(105,105,105);
+}
+
+.newTask .content {
+    outline: none;
+    font-size: 1rem;
+    cursor: text;
+    margin-top: 5px;
+}
+
+.newTask .content:empty:before {
+    content: attr(placeholder);
+    color: rgb(105,105,105);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.buttonContainer button {
+    padding: 0px;
+    width: 80px;
+}
+
+.taskOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.taskOption > select {
+    height: 30px;
+    background-color: wheat;
+    border: 5px solid slateblue;
+    border-radius: 5px;
+    outline: none;
+}

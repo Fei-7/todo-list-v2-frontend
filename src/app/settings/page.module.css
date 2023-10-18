@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.main > div h1 {
+    margin-bottom: 10px;
+}
+
+.main > div > input {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 5px solid slateblue;
+    border-radius: 10px;
+    background-color: wheat;
+    outline: none;
+}
+
+.buttonContainer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonContainer > button {
+    padding: 5px;
+    width: auto;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: wheat;
+    border: 4px solid slateblue;
+}
