@@ -15,6 +15,16 @@ export default function Page() {
     async function submit(e) {
         e.preventDefault()
 
+        if (name.length == 0) {
+            alert("Please fill your name in");
+            return;
+        }
+
+        if (password.length == 0) {
+            alert("Please provide password");
+            return;
+        }
+
         if (!isValidEmail(email)) {
             alert("Email is not valid");
             return;

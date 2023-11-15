@@ -14,6 +14,11 @@ export default function Page() {
     async function submit(e) {
         e.preventDefault()
 
+        if (password.length == 0) {
+            alert("Please provide password");
+            return;
+        }
+
         if (!isValidEmail(email)) {
             alert("Email is not valid");
             return;
