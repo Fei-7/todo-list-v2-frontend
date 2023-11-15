@@ -4,9 +4,10 @@ import { useState } from "react"
 import Button from "../../../components/Button"
 import style from "../login/page.module.css"
 import { useRouter } from "next/navigation"
+import { isValidEmail, isValidname } from "../../../utils/inputValidate"
 
 export default function Page() {
-    const [username, setUsername] = useState("")
+    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const router = useRouter()
@@ -14,11 +15,16 @@ export default function Page() {
     async function submit(e) {
         e.preventDefault()
 
+        if (!isValidEmail(email)) {
+            alert("Email is not valid");
+            return;
+        }
+
         await fetch("http://localhost:8000/api/register", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                name: username,
+                name: name,
                 email: email,
                 password: password
             })
@@ -35,8 +41,8 @@ export default function Page() {
                 <input 
                     className={style.input} 
                     type="text" 
-                    placeholder="Username"
-                    onChange={(e) => {setUsername(e.target.value)}}
+                    placeholder="Name"
+                    onChange={(e) => {setName(e.target.value)}}
                 />
                 <input 
                     className={style.input} 

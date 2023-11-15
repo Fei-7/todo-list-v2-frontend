@@ -4,6 +4,7 @@ import Button from "../../../components/Button"
 import style from "./page.module.css"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { isValidEmail } from "../../../utils/inputValidate"
 
 export default function Page() {
     const [email, setEmail] = useState("")
@@ -12,6 +13,11 @@ export default function Page() {
 
     async function submit(e) {
         e.preventDefault()
+
+        if (!isValidEmail(email)) {
+            alert("Email is not valid");
+            return;
+        }
 
         const response = await fetch("http://localhost:8000/api/login", {
             method: "POST",
